@@ -1,4 +1,4 @@
-AD# Finger Calculator
+# Finger Calculator
 
 ## Overview
 
@@ -103,7 +103,7 @@ pip install opencv-python mediapipe
 
 ### Gesture Controls
 - **Thumbs Up (👍)**: Addition (+). Thumb extended, other fingers folded.
-- **Palm Down (![alt text](image.png))**: Subtraction (-). All fingers folded (flat hand).
+- **Thumbs Down (👎)**: Subtraction (-). All fingers folded (flat hand).
 - **Peace Sign (✌️)**: Multiplication (*). Index and middle fingers extended, others folded.
 - **Open Palm (🖐️)**: Division (/). All fingers extended.
 
