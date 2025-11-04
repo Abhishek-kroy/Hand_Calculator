@@ -1,8 +1,6 @@
-# Finger Calculator
+# Hand Calculator
 
-## Overview
-
-The Finger Calculator is an interactive Python application that allows users to perform basic arithmetic operations using hand gestures captured via a webcam. It leverages computer vision techniques to detect and count fingers for inputting numbers (0-5) and recognizes specific hand gestures to select mathematical operations (addition, subtraction, multiplication, division). This project demonstrates the integration of OpenCV for video processing and MediaPipe for real-time hand landmark detection.
+The Hand Calculator is an interactive Python application that allows users to perform basic arithmetic operations using hand gestures captured via a webcam. It leverages computer vision techniques to detect and count fingers for inputting numbers (0-5) and recognizes specific hand gestures to select mathematical operations (addition, subtraction, multiplication, division). This project demonstrates the integration of OpenCV for video processing and MediaPipe for real-time hand landmark detection.
 
 The application runs in a loop, guiding the user through stages: capturing the first number, capturing the second number, selecting an operation via gesture or keyboard, and displaying the result. It includes features like gesture debouncing, averaging finger counts for stability, and visual feedback on the screen.
 
@@ -12,7 +10,7 @@ The application runs in a loop, guiding the user through stages: capturing the f
 - **Finger Counting**: Accurately counts fingers (0-5) based on landmark positions, accounting for left/right hand orientation.
 - **Gesture Recognition**: Recognizes specific gestures for operations:
   - Thumbs up: Addition (+)
-  - Thumbs down (flat hand): Subtraction (-)
+  - plam down (flat hand): Subtraction (-)
   - Peace sign: Multiplication (*)
   - Open palm: Division (/)
 - **Keyboard Fallback**: Allows manual selection of operations using keyboard keys (+, -, *, /).
@@ -22,6 +20,55 @@ The application runs in a loop, guiding the user through stages: capturing the f
 - **Bounding Box**: Draws a bounding box around the detected hand for better visualization.
 - **Reset and Quit Options**: Easy controls to reset the process or exit the application.
 - **Flipped Camera View**: Handles selfie-mode camera flipping for natural interaction.
+
+## Screenshots
+
+### Starting
+<p align="center">
+  <img width="400" alt="Starting Screen" src="https://github.com/user-attachments/assets/df31bc4f-9b2d-41e2-82b2-789dafe7b09b" />
+</p>
+
+---
+
+### ➕ Addition
+<p align="center">
+  <img width="280" alt="Addition - First Number" src="https://github.com/user-attachments/assets/9fcb399c-4f5d-4328-af0c-a97fcf5e4b8e" />
+  <img width="280" alt="Addition - Second Number" src="https://github.com/user-attachments/assets/382aefb0-6903-43b3-a3cb-f7bf7e0a95e3" />
+  <img width="280" alt="Addition - Result" src="https://github.com/user-attachments/assets/bffff7b0-8e4d-4bd6-8a2c-5e20f48545bc" />
+</p>
+
+---
+
+### ➖ Subtraction
+<p align="center">
+  <img width="280" alt="Subtraction Step 1" src="https://github.com/user-attachments/assets/25faea46-e668-495e-922b-821c1c1da4ae" />
+  <img width="280" alt="Subtraction Step 2" src="https://github.com/user-attachments/assets/6546535e-2870-4650-956f-b56b3b558eb0" />
+  <img width="280" alt="Subtraction Result" src="https://github.com/user-attachments/assets/0657954b-9822-40cb-8375-bdede8b66566" />
+</p>
+
+---
+
+### ✖️ Multiplication
+<p align="center">
+  <img width="280" alt="Multiplication Step 1" src="https://github.com/user-attachments/assets/66f1b8ee-0407-47b7-a0c4-134e03be9e2f" />
+  <img width="280" alt="Multiplication Step 2" src="https://github.com/user-attachments/assets/97d48555-4d23-450f-8d67-c7a1ee118c08" />
+  <img width="280" alt="Multiplication Result" src="https://github.com/user-attachments/assets/094dbb3e-aacd-47f7-bff1-581b90863957" />
+</p>
+
+---
+
+### ➗ Division
+<p align="center">
+  <img width="280" alt="Division Step 1" src="https://github.com/user-attachments/assets/ff07ca39-7784-413a-bc51-e6450e29714f" />
+  <img width="280" alt="Division Step 2" src="https://github.com/user-attachments/assets/3bd64cb7-fe49-4c8e-93b2-20465557e1e7" />
+  <img width="280" alt="Division Result" src="https://github.com/user-attachments/assets/4f2915c4-9220-46a2-a0e3-24f323074bcb" />
+</p>
+
+---
+
+> 🧭 **Controls:**  
+> Press `q` → Quit the calculator  
+> Press `r` → Restart the operation 
 
 ## Requirements
 
@@ -103,7 +150,7 @@ pip install opencv-python mediapipe
 
 ### Gesture Controls
 - **Thumbs Up (👍)**: Addition (+). Thumb extended, other fingers folded.
-- **Thumbs Down (👎)**: Subtraction (-). All fingers folded (flat hand).
+- **Plam Down (🫲)**: Subtraction (-). All fingers folded (flat hand).
 - **Peace Sign (✌️)**: Multiplication (*). Index and middle fingers extended, others folded.
 - **Open Palm (🖐️)**: Division (/). All fingers extended.
 
@@ -141,26 +188,3 @@ pip install opencv-python mediapipe
 - **Gesture Not Recognized**: Hold gestures steady for the debounce time, ensure correct finger positions.
 - **Camera Issues**: Check webcam permissions, try a different camera index in `cv2.VideoCapture(0)`.
 - **Performance**: Lower `model_complexity` in MediaPipe Hands if running on low-end hardware.
-
-## Contributing
-
-Contributions are welcome! Please fork the repository, make changes, and submit a pull request. Ensure code follows PEP 8 standards and includes comments for clarity.
-
-## License
-
-This project is open-source and available under the MIT License. Feel free to use, modify, and distribute.
-
-## Acknowledgments
-
-- **MediaPipe**: For providing robust hand tracking capabilities.
-- **OpenCV**: For computer vision utilities.
-- Inspired by various gesture recognition projects in computer vision.
-
-## Screenshots
-
-*(Add screenshots here if available, e.g., images of the application in different stages.)*
-
-For example:
-- ![Stage 1](screenshots/stage1.png)
-- ![Gesture Detection](screenshots/gesture.png)
-- ![Result](screenshots/result.png)
